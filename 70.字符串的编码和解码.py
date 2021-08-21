@@ -1,0 +1,11 @@
+s='天涯共此时'
+#编码
+print(s.encode(encoding='GBK'))#在GBK这种编码格式下，一个中文占两个字节
+print(s.encode(encoding='UTF-8'))#在UTF-8这种编码格式下，一个中文占三个字节
+#解码
+#byte代表就是一个二进制数据（字节类型的数据）
+byte=s.encode(encoding='GBK')
+print(byte.decode(encoding="GBk"))
+#注意：由什么编码，就得由什么解码。编码解码的格式不能不一样
+byte=s.encode(encoding='UTF-8')
+print(byte.decode(encoding="UTF-8"))
